@@ -1,0 +1,17 @@
+==07/23/2018 06:10:22 pm Joy_Of_Text_Plugin::apply_updates||Installed version : 2.2 This version : 2.2.1
+==07/23/2018 06:10:22 pm Joy_Of_Text_Plugin::apply_updates||Apply Updates. Run dbdelta for wp2w_jot_groupmeta Return : Array
+(
+    [wp2w_jot_groupmeta.jot_groupmetaid] => Changed type of wp2w_jot_groupmeta.jot_groupmetaid from int(9) to 
+    [wp2w_jot_groupmeta.jot_groupid] => Changed type of wp2w_jot_groupmeta.jot_groupid from varchar(40) to 
+    [wp2w_jot_groupmeta.jot_groupmetakey] => Changed type of wp2w_jot_groupmeta.jot_groupmetakey from varchar(255) to 
+    [wp2w_jot_groupmeta.jot_groupmetaval] => Changed type of wp2w_jot_groupmeta.jot_groupmetaval from longtext to 
+)
+
+==07/23/2018 06:10:22 pm Joy_Of_Text_Plugin::apply_updates||Apply Updates. Run dbdelta for wp2w_jot_groupmemxref Return : Array
+(
+    [wp2w_jot_groupmemxref.jot_grpid] => Changed type of wp2w_jot_groupmemxref.jot_grpid from int(9) to 
+    [wp2w_jot_groupmemxref.jot_grpmemid] => Changed type of wp2w_jot_groupmemxref.jot_grpmemid from int(9) to 
+    [wp2w_jot_groupmemxref.jot_grpxrefts] => Changed type of wp2w_jot_groupmemxref.jot_grpxrefts from timestamp to 
+)
+
+==07/23/2018 06:10:22 pm Joy_Of_Text_Plugin::populate_xref_table||Installed version : 2.2 This version : 2.2.1 Migrated: yes
