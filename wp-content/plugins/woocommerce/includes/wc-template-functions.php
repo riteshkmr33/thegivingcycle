@@ -1188,13 +1188,15 @@ if ( ! function_exists( 'woocommerce_template_loop_add_to_cart' ) ) {
 					'button',
 					'product_type_' . $product->get_type(),
 					$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
-					$product->supports( 'ajax_add_to_cart' ) ? 'ajax_add_to_cart' : '',
+					$product->supports( 'ajax_add_to_cart' ) ? 'ajax_add_to_cartss' : '',
+                                        'boss-tooltip'
 				) ) ),
 				'attributes' => array(
 					'data-product_id'  => $product->get_id(),
 					'data-product_sku' => $product->get_sku(),
 					'aria-label'       => $product->add_to_cart_description(),
 					'rel'              => 'nofollow',
+                                        'data-tooltip'     => 'Add to cart'
 				),
 			);
 

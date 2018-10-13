@@ -30,10 +30,12 @@ function bp_messages_action_create_message() {
 	$success     = false;
 
 	// Missing subject or content.
-	if ( empty( $_POST['subject'] ) || empty( $_POST['content'] ) ) {
+	if ( (!isset( $_POST['send-notice']) && empty($_POST['send-to-input'])) || empty( $_POST['subject'] ) || empty( $_POST['content'] ) ) {
 		$success  = false;
 
-		if ( empty( $_POST['subject'] ) ) {
+		if (!isset( $_POST['send-notice']) && empty($_POST['send-to-input'])) {
+			$feedback = __( 'Your message was not sent. Please choose atleast one recipient', 'buddypress' );
+		} else if ( empty( $_POST['subject'] ) ) {
 			$feedback = __( 'Your message was not sent. Please enter a subject line.', 'buddypress' );
 		} else {
 			$feedback = __( 'Your message was not sent. Please enter some content.', 'buddypress' );

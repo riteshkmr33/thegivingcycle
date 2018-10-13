@@ -115,6 +115,17 @@ function buddyboss_media_albums_process_update(){
 						$data['id'] = $album;
 						buddyboss_media_update_album( $data );
 						bp_core_add_message( __( 'Album was successfully updated.', 'buddyboss-media' ), 'success' );
+                                                
+                                                //Redirect to new album
+                                                if ( bbm_is_group_media_screen( 'albums' ) ) {
+                                                        $group_link = bp_get_group_permalink( buddypress()->groups->current_group );
+                                                        $new_album_url = trailingslashit( $group_link . buddyboss_media_component_slug() . '/albums/'  );
+                                                } else {
+                                                        $new_album_url = $bp->displayed_user->domain . buddyboss_media_component_slug() . '/albums/';
+                                                }
+                                                
+                                                wp_redirect(  "?" );
+                                                exit();
 					}
 				}
 			}
